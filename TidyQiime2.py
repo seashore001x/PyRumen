@@ -29,6 +29,9 @@ for line in taxfile.readlines()[1:]:
     line_list = re.split('\t|;', line)
     line_list_clean = []
     for element in line_list[:-1]:
+        if (re.search('uncultured', element)){
+            element = ''
+        }
         try:
             line_list_clean.append(re.search(pattern, element).group(0))
         except AttributeError:
