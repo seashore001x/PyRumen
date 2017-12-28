@@ -1,5 +1,5 @@
 import re
-print('This script is used to tidy Qiime2 generated taxnomic file!/nIf you have any trouble using this script./nPlease contact the author./n')
+print('This script is used to tidy Qiime2 generated taxnomic file!\nIf you have any trouble using this script.\nPlease contact the author.\n')
 
 # define the input file direcotry
 filepath = input('Your QIIME2 taxonomic assignment document directory?\n')
