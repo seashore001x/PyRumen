@@ -13,10 +13,10 @@ taxfile_clean = open(newfilepath, 'w')
 while True :
     database = input('Which database was used? [Greengene or SILVA]\n')
     if database.lower() == 'greengene':
-        pattern = '(?<=\w__).+|(Seq\d)'
+        pattern = '(?<=\w__).+|(Seq\d+)'
         break
     elif database.lower() == 'silva':
-        pattern = '(?<=D_\d__).+|(Seq\d)'
+        pattern = '(?<=D_\d__).+|(Seq\d+)'
         break
     else:
         print("invalid database: '%s'\n" % database) 
