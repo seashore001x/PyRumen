@@ -10,7 +10,7 @@ taxfile_clean = open(newfilepath, 'w')
 
 
 # define which taxonomic database was used
-while True :
+while True:
     database = input('Which database was used? [Greengene or SILVA]\n')
     if database.lower() == 'greengene':
         pattern = '(?<=\w__).+|(Seq\d+)'
@@ -29,9 +29,8 @@ for line in taxfile.readlines()[1:]:
     line_list = re.split('\t|;', line)
     line_list_clean = []
     for element in line_list[:-1]:
-        if (re.search('uncultured', element)){
+        if re.search('uncultured', element):
             element = ''
-        }
         try:
             line_list_clean.append(re.search(pattern, element).group(0))
         except AttributeError:
